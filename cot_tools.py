@@ -55,12 +55,12 @@ def show_reasoning(input: ShowReasoningInput) -> ShowReasoningOutput:
     return ShowReasoningOutput(text="Reasoning shown")
 
 @mcp.tool()
-def calculate(input: CalculateInput) -> TextContent:
+def calculate(expression: str) -> TextContent:
     """Calculate the result of an expression"""
     console.print("[blue]FUNCTION CALL:[/blue] calculate()")
-    console.print(f"[blue]Expression:[/blue] {input.expression}")
+    console.print(f"[blue]Expression:[/blue] {expression}")
     try:
-        result = eval(input.expression)
+        result = eval(expression)
         console.print(f"[green]Result:[/green] {result}")
         return TextContent(
             type="text",
