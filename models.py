@@ -27,3 +27,36 @@ class ExpSumInput(BaseModel):
 
 class ExpSumOutput(BaseModel):
     result: float
+
+# Text/Reasoning Based Function Models
+
+class ShowReasoningInput(BaseModel):
+    steps: List[str]
+
+class ShowReasoningOutput(BaseModel):
+    text: str
+
+class CalculateInput(BaseModel):
+    expression: str
+
+class CalculateOutput(BaseModel):
+    text: str
+
+class VerifyInput(BaseModel):
+    expression: str
+    expected: float
+
+class VerifyOutput(BaseModel):
+    text: str
+
+class CheckConsistencyInput(BaseModel):
+    steps: List[str]
+
+class CheckConsistencyOutput(BaseModel):
+    text: str
+
+class FallbackReasoningInput(BaseModel):
+    step_description: str
+
+class FallbackReasoningOutput(BaseModel):
+    text: str

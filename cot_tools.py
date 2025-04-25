@@ -14,7 +14,16 @@ from pywinauto.application import Application
 import win32gui
 import win32con
 import time
-from models import AddInput, AddOutput, SqrtInput, SqrtOutput, StringsToIntsInput, StringsToIntsOutput, ExpSumInput, ExpSumOutput
+from models import (
+    AddInput, AddOutput, SqrtInput, SqrtOutput, 
+    StringsToIntsInput, StringsToIntsOutput, 
+    ExpSumInput, ExpSumOutput,
+    ShowReasoningInput, ShowReasoningOutput,
+    CalculateInput, CalculateOutput,
+    VerifyInput, VerifyOutput,
+    CheckConsistencyInput, CheckConsistencyOutput,
+    FallbackReasoningInput, FallbackReasoningOutput
+)
 
 
 console = Console()
@@ -22,66 +31,51 @@ mcp = FastMCP("CoTCalculator")
 
 
 @mcp.tool()
-def show_reasoning(steps: list) -> TextContent:
+def show_reasoning(input: ShowReasoningInput) -> ShowReasoningOutput:
     """Show the step-by-step reasoning process"""
     console.print("[blue]FUNCTION CALL:[/blue] show_reasoning()")
-    for i, step in enumerate(steps, 1):
+    for i, step in enumerate(input.steps, 1):
         console.print(Panel(
             f"{step}",
             title=f"Step {i}",
             border_style="cyan"
         ))
-    return TextContent(
-        type="text",
-        text="Reasoning shown"
-    )
+    return ShowReasoningOutput(text="Reasoning shown")
 
 @mcp.tool()
-def calculate(expression: str) -> TextContent:
+def calculate(input: CalculateInput) -> CalculateOutput:
     """Calculate the result of an expression"""
     console.print("[blue]FUNCTION CALL:[/blue] calculate()")
-    console.print(f"[blue]Expression:[/blue] {expression}")
+    console.print(f"[blue]Expression:[/blue] {input.expression}")
     try:
-        result = eval(expression)
+        result = eval(input.expression)
         console.print(f"[green]Result:[/green] {result}")
-        return TextContent(
-            type="text",
-            text=str(result)
-        )
+        return CalculateOutput(text=str(result))
     except Exception as e:
         console.print(f"[red]Error:[/red] {str(e)}")
-        return TextContent(
-            type="text",
-            text=f"Error: {str(e)}"
-        )
+        return CalculateOutput(text=f"Error: {str(e)}")
 
 @mcp.tool()
-def verify(expression: str, expected: float) -> TextContent:
+def verify(input: VerifyInput) -> VerifyOutput:
     """Verify if a calculation is correct"""
     console.print("[blue]FUNCTION CALL:[/blue] verify()")
-    console.print(f"[blue]Verifying:[/blue] {expression} = {expected}")
+    console.print(f"[blue]Verifying:[/blue] {input.expression} = {input.expected}")
     try:
-        actual = float(eval(expression))
-        is_correct = abs(actual - float(expected)) < 1e-10
+        actual = float(eval(input.expression))
+        is_correct = abs(actual - float(input.expected)) < 1e-10
         
         if is_correct:
-            console.print(f"[green]✓ Correct! {expression} = {expected}[/green]")
+            console.print(f"[green]✓ Correct! {input.expression} = {input.expected}[/green]")
         else:
-            console.print(f"[red]✗ Incorrect! {expression} should be {actual}, got {expected}[/red]")
+            console.print(f"[red]✗ Incorrect! {input.expression} should be {actual}, got {input.expected}[/red]")
             
-        return TextContent(
-            type="text",
-            text=str(is_correct)
-        )
+        return VerifyOutput(text=str(is_correct))
     except Exception as e:
         console.print(f"[red]Error:[/red] {str(e)}")
-        return TextContent(
-            type="text",
-            text=f"Error: {str(e)}"
-        )
+        return VerifyOutput(text=f"Error: {str(e)}")
 
 @mcp.tool()
-def check_consistency(steps: list) -> TextContent:
+def check_consistency(input: CheckConsistencyInput) -> CheckConsistencyOutput:
     """Check if calculation steps are consistent with each other"""
     console.print("[blue]FUNCTION CALL:[/blue] check_consistency()")
     
@@ -103,7 +97,7 @@ def check_consistency(steps: list) -> TextContent:
         insights = []
         previous = None
         
-        for i, (expression, result) in enumerate(steps, 1):
+        for i, (expression, result) in enumerate(input.steps, 1):
             checks = []
             
             # 1. Basic Calculation Verification
@@ -187,7 +181,7 @@ def check_consistency(steps: list) -> TextContent:
             ))
 
         # Final Consistency Score
-        total_checks = len(steps) * 5  # 5 types of checks per step
+        total_checks = len(input.steps) * 5  # 5 types of checks per step
         passed_checks = total_checks - (len(issues) * 2 + len(warnings))
         consistency_score = (passed_checks / total_checks) * 100
 
@@ -201,38 +195,30 @@ def check_consistency(steps: list) -> TextContent:
             border_style="green" if consistency_score > 80 else "yellow" if consistency_score > 60 else "red"
         ))
 
-        return TextContent(
-            type="text",
-            text=str({
-                "consistency_score": consistency_score,
-                "issues": issues,
-                "warnings": warnings,
-                "insights": insights
-            })
-        )
+        return CheckConsistencyOutput(text=str({
+            "consistency_score": consistency_score,
+            "issues": issues,
+            "warnings": warnings,
+            "insights": insights
+        }))
     except Exception as e:
         console.print(f"[red]Error in consistency check: {str(e)}[/red]")
-        return TextContent(
-            type="text",
-            text=f"Error: {str(e)}"
-        )
+        return CheckConsistencyOutput(text=f"Error: {str(e)}")
 
 @mcp.tool()
-def fallback_reasoning(step_description: str) -> TextContent:
-    """Handle errors or uncertainty in the calculation process"""
+def fallback_reasoning(input: FallbackReasoningInput) -> FallbackReasoningOutput:
+    """Provide fallback reasoning when primary reasoning fails"""
     console.print("[blue]FUNCTION CALL:[/blue] fallback_reasoning()")
+    console.print(f"[blue]Step Description:[/blue] {input.step_description}")
     
     # Create an error panel with the step description
     console.print(Panel(
-        f"[yellow]Fallback triggered:[/yellow]\n{step_description}",
+        f"[yellow]Fallback triggered:[/yellow]\n{input.step_description}",
         title="Fallback Reasoning",
         border_style="red"
     ))
     
-    return TextContent(
-        type="text",
-        text=f"Fallback processed: {step_description}"
-    )
+    return FallbackReasoningOutput(text="Fallback reasoning provided")
 
 
 #addition tool
