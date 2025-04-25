@@ -103,7 +103,7 @@ async def main():
 
         server_params = StdioServerParameters(
             command="python",
-            args=["tools.py"]
+            args=["cot_tools.py"]
         )
 
         async with stdio_client(server_params) as (read, write):
