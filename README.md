@@ -41,11 +41,13 @@ The `perceive.py` file was created to handle all input processing and interpreta
   - Input parsing logic that was previously embedded in the main file
   - Command interpretation logic that determined what action to take based on user input
 
+The `perceive.py` file is responsible for handling all input processing and interpretation. It contains:
+- Methods for parsing mathematical expressions to identify operations and operands
+- Methods for parsing user commands to determine the intended action
+
 The `Perceive` class is responsible for:
-- Parsing mathematical expressions to identify operations and operands
-- Parsing user commands to determine the intended action
-- Opening Microsoft Paint and managing its state
-- Creating image thumbnails
+- Parsing mathematical expressions and validating their structure
+- Parsing user commands to determine the intended mathematical operation or reasoning step
 
 ### 3. `memory.py` (New)
 
@@ -104,12 +106,17 @@ The `action.py` file was created to handle all action execution. It contains:
   - The special functions (strings_to_chars_to_int, int_list_to_exponential_sum, fibonacci_numbers)
   - The reasoning and verification functions (show_reasoning, verify, check_consistency, fallback_reasoning)
 
+The `action.py` file is responsible for executing mathematical operations. It contains:
+
+- Functions for basic math operations (addition, subtraction, multiplication, division, etc.)
+- Functions for special math operations (power, square root, cube root, factorial, etc.)
+- Functions for reasoning and verification (showing reasoning, verifying calculations, checking consistency)
+- Functions for special utilities (ASCII conversion, exponential sum, Fibonacci numbers)
+
 The `Action` class is responsible for:
-- Executing basic math operations (addition, subtraction, multiplication, division, etc.)
-- Executing special math operations (power, square root, cube root, factorial, etc.)
-- Executing Paint-related operations (opening Paint, drawing rectangles, adding text)
-- Executing reasoning and verification operations (showing reasoning, verifying calculations, checking consistency)
-- Executing special functions (ASCII conversion, exponential sum, Fibonacci numbers)
+- Executing all supported mathematical and reasoning operations
+- Providing a unified interface for the agent to perform calculations and checks
+
 
 ### 6. `agent_main.py` (Modified)
 
@@ -134,6 +141,20 @@ The `MathAgent` class is responsible for:
 - Routing requests to the appropriate component
 - Maintaining the agent's state (current expression, result, steps)
 - Providing a unified interface to all components
+
+
+### 7. `math_tools.py`
+
+The `math_tools.py` script acts as the tool server for the agent. It exposes the core mathematical and reasoning functions from the `Perceive` class as callable tools via the MCP protocol.
+
+**Key responsibilities:**
+- Imports the `Perceive` class and instantiates it
+- Registers key methods (such as `show_reasoning`, `calculate`, `verify`, and `check_consistency`) as MCP tools
+- Starts the MCP server, allowing the agent to call these tools via standard input/output
+
+**Example usage:**
+To launch the tool server, run: `python math_tools.py`
+This script is referenced in the agent’s configuration (e.g., via `StdioServerParameters`) to provide tool functionality for mathematical reasoning and calculation.
 
 ## Component Interactions
 
