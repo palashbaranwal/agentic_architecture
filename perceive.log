@@ -1,0 +1,127 @@
+2025-04-26 12:15:38,071 - Perceive - INFO - Perceive class initialized
+2025-04-26 12:15:38,094 - Perceive - INFO - Parsing command: 2 + 3
+2025-04-26 12:15:38,095 - Perceive - INFO - Defaulting to calculate action with expression: 2 + 3
+2025-04-26 12:15:38,100 - Perceive - INFO - Parsing command: 10 - 4
+2025-04-26 12:15:38,101 - Perceive - INFO - Defaulting to calculate action with expression: 10 - 4
+2025-04-26 12:15:38,105 - Perceive - INFO - Parsing command: 5 * 6
+2025-04-26 12:15:38,106 - Perceive - INFO - Defaulting to calculate action with expression: 5 * 6
+2025-04-26 12:15:38,111 - Perceive - INFO - Parsing command: 20 / 4
+2025-04-26 12:15:38,113 - Perceive - INFO - Defaulting to calculate action with expression: 20 / 4
+2025-04-26 12:15:38,123 - Perceive - INFO - Parsing command: reason 2 + 3
+2025-04-26 12:15:38,123 - Perceive - INFO - Identified reason action with expression: 2 + 3
+2025-04-26 12:15:38,124 - Perceive - INFO - Successfully parsed expression: 2 + 3 = 5
+2025-04-26 12:15:38,128 - Perceive - INFO - Parsing command: verify 2 + 3 = 5
+2025-04-26 12:15:38,128 - Perceive - INFO - Identified verify action with expression: 2 + 3 and expected: 5
+2025-04-26 12:15:38,136 - Perceive - INFO - Parsing command: consistency 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:15:38,136 - Perceive - INFO - Identified consistency check with steps: 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:15:39,379 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:40,785 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:40,786 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:40,805 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:41,762 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:41,763 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:41,765 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:42,903 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:42,904 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:42,906 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:43,903 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:43,904 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:43,906 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:45,026 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:45,027 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:45,041 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:45,857 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:45,857 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:45,858 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:46,724 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:46,730 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:46,732 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:47,666 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:47,667 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:47,669 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:48,531 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:48,920 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:48,922 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:49,798 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:49,799 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:49,802 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:50,648 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:50,653 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:50,654 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:51,508 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:51,513 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:51,515 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:52,363 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:52,367 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:52,369 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:53,157 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:53,163 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:53,164 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:53,946 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:53,949 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:53,962 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:54,688 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:15:54,692 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:15:54,693 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:15:55,059 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2025-04-26 12:25:17,046 - Perceive - INFO - Perceive class initialized
+2025-04-26 12:25:17,068 - Perceive - INFO - Parsing command: 2 + 3
+2025-04-26 12:25:17,068 - Perceive - INFO - Defaulting to calculate action with expression: 2 + 3
+2025-04-26 12:25:17,073 - Perceive - INFO - Parsing command: 10 - 4
+2025-04-26 12:25:17,073 - Perceive - INFO - Defaulting to calculate action with expression: 10 - 4
+2025-04-26 12:25:17,078 - Perceive - INFO - Parsing command: 5 * 6
+2025-04-26 12:25:17,078 - Perceive - INFO - Defaulting to calculate action with expression: 5 * 6
+2025-04-26 12:25:17,086 - Perceive - INFO - Parsing command: 20 / 4
+2025-04-26 12:25:17,087 - Perceive - INFO - Defaulting to calculate action with expression: 20 / 4
+2025-04-26 12:25:17,094 - Perceive - INFO - Parsing command: reason 2 + 3
+2025-04-26 12:25:17,094 - Perceive - INFO - Identified reason action with expression: 2 + 3
+2025-04-26 12:25:17,095 - Perceive - INFO - Successfully parsed expression: 2 + 3 = 5
+2025-04-26 12:25:17,101 - Perceive - INFO - Parsing command: verify 2 + 3 = 5
+2025-04-26 12:25:17,101 - Perceive - INFO - Identified verify action with expression: 2 + 3 and expected: 5
+2025-04-26 12:25:17,109 - Perceive - INFO - Parsing command: consistency 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:25:17,109 - Perceive - INFO - Identified consistency check with steps: 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:35:22,737 - Perceive - INFO - Perceive class initialized
+2025-04-26 12:35:22,759 - Perceive - INFO - Parsing command: 2 + 3
+2025-04-26 12:35:22,759 - Perceive - INFO - Defaulting to calculate action with expression: 2 + 3
+2025-04-26 12:35:22,764 - Perceive - INFO - Parsing command: 10 - 4
+2025-04-26 12:35:22,764 - Perceive - INFO - Defaulting to calculate action with expression: 10 - 4
+2025-04-26 12:35:22,768 - Perceive - INFO - Parsing command: 5 * 6
+2025-04-26 12:35:22,768 - Perceive - INFO - Defaulting to calculate action with expression: 5 * 6
+2025-04-26 12:35:22,774 - Perceive - INFO - Parsing command: 20 / 4
+2025-04-26 12:35:22,775 - Perceive - INFO - Defaulting to calculate action with expression: 20 / 4
+2025-04-26 12:35:22,780 - Perceive - INFO - Parsing command: reason 2 + 3
+2025-04-26 12:35:22,781 - Perceive - INFO - Identified reason action with expression: 2 + 3
+2025-04-26 12:35:22,782 - Perceive - INFO - Successfully parsed expression: 2 + 3 = 5
+2025-04-26 12:35:22,784 - Perceive - INFO - Parsing command: verify 2 + 3 = 5
+2025-04-26 12:35:22,784 - Perceive - INFO - Identified verify action with expression: 2 + 3 and expected: 5
+2025-04-26 12:35:22,790 - Perceive - INFO - Parsing command: consistency 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:35:22,791 - Perceive - INFO - Identified consistency check with steps: 2 + 3 = 5, 5 * 2 = 10
+2025-04-26 12:35:23,618 - Perceive - INFO - Perceive class initialized
+2025-04-26 12:35:23,647 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:25,007 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:25,015 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:25,018 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-26 12:35:25,020 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:25,818 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:25,823 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:25,826 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:26,718 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:26,723 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:26,725 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:27,530 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:27,535 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:27,537 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:28,380 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:28,414 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:28,416 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:29,253 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:29,259 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:29,261 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:30,145 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:30,146 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:30,148 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:31,516 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:31,522 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-26 12:35:31,526 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-26 12:35:32,244 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-26 12:35:32,245 - google_genai.models - INFO - AFC remote call 1 is done.
