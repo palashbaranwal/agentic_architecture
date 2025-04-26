@@ -1,5 +1,3 @@
-# flask_server.py
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from perceive import Perceive
@@ -12,9 +10,13 @@ perceive = Perceive()
 @app.route('/solve', methods=['POST'])
 def solve():
     data = request.get_json()
-    print("Received data:", data)  
     problem = data.get('problem', '')
-    print("Problem:", problem)  
+    gemini_key = data.get('gemini_key', '')
+
+    # Pass gemini_key to your agent logic as needed
+    # For example, you might set it as an attribute or pass it to a function
+    # perceive.set_gemini_key(gemini_key)  # If you have such a method
+
     result = perceive.parse_expression(problem)
     if result is None:
         return jsonify({'result': 'Invalid expression or error in calculation.'})

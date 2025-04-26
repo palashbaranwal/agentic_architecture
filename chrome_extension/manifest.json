@@ -3,7 +3,7 @@
     "name": "Math Agent Solver",
     "version": "1.0",
     "description": "Solve math problems using your local AI agent.",
-    "permissions": [],
+    "permissions": ["storage"],
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
