@@ -4,6 +4,8 @@ This project is a modular, agentic math problem solver that connects a Chrome ex
 
 ---
 
+Youtube Demo - https://youtu.be/gpT0NJ1UFFg  
+
 ## Table of Contents
 
 1. [Features](#features)  
