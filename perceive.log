@@ -419,3 +419,48 @@
 2025-04-26 16:25:38,414 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 16:25:38] "OPTIONS /solve HTTP/1.1" 200 -
 2025-04-26 16:25:38,730 - Perceive - INFO - Successfully parsed expression: 1356*56155135+165-165 = 76146363060
 2025-04-26 16:25:38,730 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 16:25:38] "POST /solve HTTP/1.1" 200 -
+2025-04-26 23:17:52,086 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:17:52,391 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:17:52,391 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:17:52,393 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 23:17:53,166 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:17:53,172 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 23:17:53,181 - werkzeug - INFO -  * Debugger PIN: 744-267-315
+2025-04-26 23:18:18,687 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:18:18] "OPTIONS /solve HTTP/1.1" 200 -
+2025-04-26 23:18:18,985 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:18:18] "[35m[1mPOST /solve HTTP/1.1[0m" 500 -
+2025-04-26 23:18:37,681 - werkzeug - INFO -  * Detected change in 'D:\\EAG\\S6_Asgn\\flask_server.py', reloading
+2025-04-26 23:18:37,772 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 23:18:38,486 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:18:38,491 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 23:18:38,494 - werkzeug - INFO -  * Debugger PIN: 744-267-315
+2025-04-26 23:19:15,903 - werkzeug - INFO -  * Detected change in 'D:\\EAG\\S6_Asgn\\flask_server.py', reloading
+2025-04-26 23:19:16,002 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 23:19:16,746 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:19:16,750 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 23:19:16,754 - werkzeug - INFO -  * Debugger PIN: 744-267-315
+2025-04-26 23:19:28,675 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:19:28,691 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:19:28,692 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:19:28,693 - werkzeug - INFO -  * Restarting with stat
+2025-04-26 23:19:29,345 - Perceive - INFO - Perceive class initialized
+2025-04-26 23:19:29,349 - werkzeug - WARNING -  * Debugger is active!
+2025-04-26 23:19:29,352 - werkzeug - INFO -  * Debugger PIN: 744-267-315
+2025-04-26 23:19:47,004 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:19:47] "OPTIONS /solve HTTP/1.1" 200 -
+2025-04-26 23:19:47,272 - Perceive - INFO - Successfully parsed expression: 2*3-5 = 1
+2025-04-26 23:19:47,273 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:19:47] "POST /solve HTTP/1.1" 200 -
+2025-04-26 23:19:58,045 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:19:58] "OPTIONS /solve HTTP/1.1" 200 -
+2025-04-26 23:19:58,361 - Perceive - INFO - Successfully parsed expression: 45*25/25 = 45.0
+2025-04-26 23:19:58,362 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2025 23:19:58] "POST /solve HTTP/1.1" 200 -
+2025-04-27 11:34:46,317 - werkzeug - INFO -  * Detected change in 'D:\\EAG\\S6_Asgn\\flask_server.py', reloading
+2025-04-27 11:34:46,718 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 11:34:48,732 - Perceive - INFO - Perceive class initialized
+2025-04-27 11:34:48,745 - werkzeug - WARNING -  * Debugger is active!
+2025-04-27 11:34:48,758 - werkzeug - INFO -  * Debugger PIN: 744-267-315
+2025-04-27 11:45:19,640 - werkzeug - INFO -  * Detected change in 'D:\\EAG\\S6_Asgn\\flask_server.py', reloading
+2025-04-27 11:45:19,791 - werkzeug - INFO -  * Restarting with stat
+2025-04-27 12:09:43,597 - Perceive - INFO - Perceive class initialized
+2025-04-27 12:14:41,219 - Perceive - INFO - Perceive class initialized
+2025-04-27 12:29:49,363 - Perceive - INFO - Perceive class initialized
+2025-04-27 12:36:33,455 - Perceive - INFO - Perceive class initialized

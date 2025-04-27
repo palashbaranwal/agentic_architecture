@@ -1,108 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Math Agent Solver</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <title>Math Agent Calculator</title>
   <style>
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      background: #f7f9fa;
-      width: 320px;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      padding: 20px 18px 18px 18px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      margin: 12px;
-    }
-    h3 {
-      margin-top: 0;
-      color: #1976d2;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-    .input-group {
-      display: flex;
-      margin-bottom: 12px;
-    }
-    input[type="text"], input[type="password"] {
-      flex: 1;
+      width: 400px;
       padding: 10px;
-      border: 1px solid #cfd8dc;
-      border-radius: 6px 0 0 6px;
-      font-size: 16px;
-      outline: none;
-      transition: border 0.2s;
+      font-family: Arial, sans-serif;
     }
-    input[type="text"]:focus, input[type="password"]:focus {
-      border-color: #1976d2;
+    #result-container {
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: none;
     }
-    button {
-      padding: 0 18px;
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 0 6px 6px 0;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    button:hover {
-      background: #1565c0;
-    }
-    #result {
-      margin-top: 18px;
-      padding: 12px;
-      background: #e3f2fd;
-      border-radius: 6px;
-      color: #1976d2;
-      font-size: 18px;
-      min-height: 24px;
-      text-align: center;
-      word-break: break-word;
-      box-shadow: 0 1px 4px rgba(25, 118, 210, 0.07);
-    }
-    .footer {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 12px;
-      color: #b0bec5;
-    }
-    .key-group {
-      display: flex;
+    .step {
       margin-bottom: 10px;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
     }
-    .key-group input[type="password"] {
-      border-radius: 6px 0 0 6px;
+    .assistant {
+      color: #0066cc;
     }
-    .key-group button {
-      border-radius: 0 6px 6px 0;
+    .user {
+      color: #666;
+      font-style: italic;
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 2s linear infinite;
+      display: none;
+      margin: 10px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .final-answer {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: green;
+    }
+    label, input, textarea, button {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    #apiKey {
+      font-family: monospace;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h3>Math Agent Solver</h3>
-    <form id="keyForm" autocomplete="off" style="margin-bottom: 14px;">
-      <div class="key-group">
-        <input type="password" id="geminiKey" placeholder="Enter Gemini API Key" required />
-        <button type="submit">Save Key</button>
-      </div>
-    </form>
-    <form id="mathForm">
-      <div class="input-group">
-        <input type="text" id="problem" placeholder="Enter a math problem..." autocomplete="off" required />
-        <button type="submit">Solve</button>
-      </div>
-    </form>
-    <div id="result"></div>
-    <div class="footer">Powered by your AI Agent</div>
+  <h2>Math Agent Calculator</h2>
+  
+  <label for="apiKey">Gemini API Key:</label>
+  <input type="password" id="apiKey" placeholder="Enter your Gemini API key">
+  
+  <label for="problem">Math Problem:</label>
+  <textarea id="problem" rows="3" placeholder="Enter a math problem to solve"></textarea>
+  
+  <button id="solve">Solve Problem</button>
+  
+  <div class="loader" id="loader"></div>
+  
+  <div id="result-container">
+    <h3>Solution Steps:</h3>
+    <div id="steps"></div>
+    <div id="final-answer" class="final-answer"></div>
   </div>
+  
   <script src="popup.js"></script>
 </body>
 </html>
