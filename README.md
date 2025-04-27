@@ -51,7 +51,7 @@ pip install flask flask-cors
 
 **b. Project structure:**
 ```
-S6_Asgn/
+agentic_architecture/
 │
 ├── flask_server.py # Main backend server (contains agent logic)
 ├── perceive.py # Perceive component
