@@ -50,7 +50,7 @@ pip install flask flask-cors
 ```
 
 **b. Project structure:**
-
+```
 S6_Asgn/
 │
 ├── flask_server.py # Main backend server (contains agent logic)
@@ -60,7 +60,7 @@ S6_Asgn/
 ├── action.py # Action component
 ├── models.py # Pydantic models (if used)
 └── other files ...
-
+```
 
 **c. Start the backend:**
 ```bash
@@ -73,13 +73,14 @@ By default, the server runs on `http://localhost:5000`.
 ### 2. Chrome Extension
 
 **a. Project structure:**
+```
 chrome_extension/
 │
 ├── manifest.json
 ├── popup.html
 ├── popup.js
 └── icons
-
+```
 
 **b. Load the extension:**
 1. Go to `chrome://extensions/` in Chrome.
@@ -167,7 +168,7 @@ Contributions are welcome! Please open issues or pull requests for improvements,
 
 ## License
 
-[MIT License](LICENSE) (or your preferred license)
+[MIT License](LICENSE)
 
 ---
 
